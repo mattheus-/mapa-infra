@@ -156,7 +156,16 @@ for layer_name in geojson_layers.keys():
 # ---------------------------
 # Initialize the Dash app and layout
 # ---------------------------
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(
+    __name__,
+    external_stylesheets=[dbc.themes.BOOTSTRAP],
+    meta_tags=[
+        {
+            "name": "norton-safeweb-site-verification",
+            "content": "TCC1BNVWZ7PH-JMUXHYCFW3TCB1D4Q09JFL3VC2ZKEMNTM5S045K9FE5C9Q7PC8MCRXZXJCOPRGI0OH7K7Q1MCN134X8WQOGW6D5TZKV2UB-Q6NJDQ4XGZ5OVBBQPYRR",
+        }
+    ],
+)
 
 # Sort the layer selector options alphabetically
 dropdown_options = [
